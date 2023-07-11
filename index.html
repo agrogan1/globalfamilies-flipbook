@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>An Incremental Tutorial</title>
+    <title>An Incremental ggplot Tutorial</title>
     <meta charset="utf-8" />
     <meta name="author" content="Andy Grogan-Kaylor" />
     <meta name="date" content="2023-07-11" />
@@ -23,7 +23,7 @@
 class: center, middle, inverse, title-slide
 
 .title[
-# An Incremental Tutorial
+# An Incremental <code>ggplot</code> Tutorial
 ]
 .subtitle[
 ## Use <span style="font-size:50px">⇦</span> and <span style="font-size:50px">⇨</span> to navigate.
@@ -133,7 +133,8 @@ ggplot(MICSsimulated,
          )) +
   labs(
     ) +
-  theme_minimal()
+  theme(title = element_text(size = rel(1.5)),
+        axis.text = element_text(size = rel(1.5)))  # larger titles
 ```
 ]
  
@@ -154,7 +155,8 @@ ggplot(MICSsimulated,
          )) +
   labs(
     ) +
-  theme_minimal()
+  theme(title = element_text(size = rel(1.5)),
+        axis.text = element_text(size = rel(1.5)))  # larger titles
 ```
 ]
  
@@ -177,7 +179,8 @@ ggplot(MICSsimulated,
 * ) +
   labs(
     ) +
-  theme_minimal()
+  theme(title = element_text(size = rel(1.5)),
+        axis.text = element_text(size = rel(1.5)))  # larger titles
 ```
 ]
  
@@ -201,7 +204,8 @@ ggplot(MICSsimulated,
   ) +
   labs(
     ) +
-  theme_minimal()
+  theme(title = element_text(size = rel(1.5)),
+        axis.text = element_text(size = rel(1.5)))  # larger titles
 ```
 ]
  
@@ -226,7 +230,8 @@ ggplot(MICSsimulated,
   ) +
   labs(
     ) +
-  theme_minimal()
+  theme(title = element_text(size = rel(1.5)),
+        axis.text = element_text(size = rel(1.5)))  # larger titles
 ```
 ]
  
@@ -252,7 +257,8 @@ ggplot(MICSsimulated,
   labs(
 *   title = "Spanking and Aggression",
     ) +
-  theme_minimal()
+  theme(title = element_text(size = rel(1.5)),
+        axis.text = element_text(size = rel(1.5)))  # larger titles
 ```
 ]
  
@@ -279,7 +285,8 @@ ggplot(MICSsimulated,
     title = "Spanking and Aggression",
 *   x = "spanking",
     ) +
-  theme_minimal()
+  theme(title = element_text(size = rel(1.5)),
+        axis.text = element_text(size = rel(1.5)))  # larger titles
 ```
 ]
  
@@ -307,12 +314,43 @@ ggplot(MICSsimulated,
     x = "spanking",
 *   y = "count"
     ) +
-  theme_minimal()
+  theme(title = element_text(size = rel(1.5)),
+        axis.text = element_text(size = rel(1.5)))  # larger titles
 ```
 ]
  
 .panel2-graph1-non_seq[
 &lt;img src="index_files/figure-html/graph1_non_seq_08_output-1.png" width="432" /&gt;
+]
+
+---
+count: false
+ 
+
+.panel1-graph1-non_seq[
+
+```r
+ggplot(MICSsimulated,
+       aes(
+         x = cd1,
+         fill = aggression
+         )) +
+  geom_bar(
+    position = position_dodge()
+  ) +
+  labs(
+    title = "Spanking and Aggression",
+    x = "spanking",
+    y = "count"
+    ) +
+* theme_minimal() +
+  theme(title = element_text(size = rel(1.5)),
+        axis.text = element_text(size = rel(1.5)))  # larger titles
+```
+]
+ 
+.panel2-graph1-non_seq[
+&lt;img src="index_files/figure-html/graph1_non_seq_09_output-1.png" width="432" /&gt;
 ]
 
 &lt;style&gt;

@@ -1,5 +1,5 @@
 ---
-title: "An Incremental Tutorial"
+title: "An Incremental `ggplot` Tutorial"
 subtitle: "Use <span style='font-size:50px'>&#8678;</span> and <span style='font-size:50px'>&#8680;</span> to navigate."
 author: "Andy Grogan-Kaylor"
 date: '`r Sys.Date()`'
@@ -135,7 +135,9 @@ ggplot(MICSsimulated,
     x = "spanking", #BREAK7
     y = "count" #BREAK8
     ) + 
-  theme_minimal() 
+  theme_minimal() + #BREAK9
+  theme(title = element_text(size = rel(1.5)),
+        axis.text = element_text(size = rel(1.5))) # larger titles
 
 ```
 

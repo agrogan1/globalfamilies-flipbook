@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>An Incremental Bar Graph</title>
+    <title>An Incremental Tutorial</title>
     <meta charset="utf-8" />
     <meta name="author" content="Andy Grogan-Kaylor" />
-    <meta name="date" content="2023-07-06" />
+    <meta name="date" content="2023-07-11" />
     <script src="libs/header-attrs-2.19/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/hygge.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/ninjutsu.css" rel="stylesheet" />
     <link href="libs/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
     <script src="libs/tile-view-0.2.6/tile-view.js"></script>
-    <script src="libs/tone-13.8.34/Tone.js"></script>
-    <script src="libs/slide-tone-0.2.6/slide-tone.js"></script>
     <script src="libs/clipboard-2.0.6/clipboard.min.js"></script>
     <link href="libs/shareon-1.4.1/shareon.min.css" rel="stylesheet" />
     <script src="libs/shareon-1.4.1/shareon.min.js"></script>
@@ -25,7 +23,7 @@
 class: center, middle, inverse, title-slide
 
 .title[
-# An Incremental Bar Graph
+# An Incremental Tutorial
 ]
 .subtitle[
 ## Use <span style="font-size:50px">⇦</span> and <span style="font-size:50px">⇨</span> to navigate.
@@ -34,7 +32,7 @@ class: center, middle, inverse, title-slide
 ### Andy Grogan-Kaylor
 ]
 .date[
-### 2023-07-06
+### 2023-07-11
 ]
 
 ---
@@ -71,7 +69,6 @@ body {
 
 * Use the &lt;span style="font-size:100px"&gt;&amp;#8678;&lt;/span&gt; and &lt;span style="font-size:100px"&gt;&amp;#8680;&lt;/span&gt; keys to move through the presentation.
 * Press *o* for *panel overview*.
-* This presentation plays a *tone* when each new item appears. Turn the volume down if you find these tones annoying.
 
 ---
 class: animated, slideInRight
@@ -88,7 +85,7 @@ class: animated, slideInRight
 ```r
 library(ggplot2) # call the library
 
-load("MICSsimulated.RData")
+load("MICSsimulated.RData") # load the data
 ```
 
 ---

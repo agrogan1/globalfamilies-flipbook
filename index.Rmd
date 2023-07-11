@@ -1,5 +1,5 @@
 ---
-title: "An Incremental Bar Graph"
+title: "An Incremental Tutorial"
 subtitle: "Use <span style='font-size:50px'>&#8678;</span> and <span style='font-size:50px'>&#8680;</span> to navigate."
 author: "Andy Grogan-Kaylor"
 date: '`r Sys.Date()`'
@@ -59,7 +59,7 @@ library(xaringanExtra)
 
 xaringanExtra::use_tile_view()
 
-xaringanExtra::use_slide_tone()
+# xaringanExtra::use_slide_tone()
 
 xaringanExtra::use_share_again()
 
@@ -70,7 +70,6 @@ xaringanExtra::use_share_again()
 
 * Use the <span style="font-size:100px">&#8678;</span> and <span style="font-size:100px">&#8680;</span> keys to move through the presentation.
 * Press *o* for *panel overview*.
-* This presentation plays a *tone* when each new item appears. Turn the volume down if you find these tones annoying.
 
 ---
 class: animated, slideInRight
@@ -87,7 +86,7 @@ class: animated, slideInRight
 
 library(ggplot2) # call the library
 
-load("MICSsimulated.RData")
+load("MICSsimulated.RData") # load the data
 
 ```
 
@@ -136,7 +135,7 @@ ggplot(MICSsimulated,
     x = "spanking", #BREAK7
     y = "count" #BREAK8
     ) + 
-  theme_minimal()
+  theme_minimal() 
 
 ```
 

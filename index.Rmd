@@ -135,9 +135,14 @@ ggplot(MICSsimulated,
     x = "spanking", #BREAK7
     y = "count" #BREAK8
     ) + 
+  scale_fill_manual( #BREAK9
+    values = c("#1CABE2", "#D8D1C9") #BREAK9
+    ) + #BREAK9
   theme_minimal() + #BREAK9
-  theme(title = element_text(size = rel(1.5)),
-        axis.text = element_text(size = rel(1.5))) # larger titles
+  theme(
+    title = element_text(size = rel(1.5)), #BREAK9
+    axis.text = element_text(size = rel(1.5)) #BREAK9
+    ) 
 
 ```
 

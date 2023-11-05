@@ -4,7 +4,7 @@
     <title>An Incremental ggplot Tutorial</title>
     <meta charset="utf-8" />
     <meta name="author" content="Andy Grogan-Kaylor" />
-    <meta name="date" content="2023-07-11" />
+    <meta name="date" content="2023-11-05" />
     <script src="libs/header-attrs-2.19/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/hygge.css" rel="stylesheet" />
@@ -32,7 +32,7 @@ class: center, middle, inverse, title-slide
 ### Andy Grogan-Kaylor
 ]
 .date[
-### 2023-07-11
+### 2023-11-05
 ]
 
 ---
@@ -133,8 +133,8 @@ ggplot(MICSsimulated,
          )) +
   labs(
     ) +
-  theme(title = element_text(size = rel(1.5)),
-        axis.text = element_text(size = rel(1.5)))  # larger titles
+  theme(
+    )
 ```
 ]
  
@@ -155,8 +155,8 @@ ggplot(MICSsimulated,
          )) +
   labs(
     ) +
-  theme(title = element_text(size = rel(1.5)),
-        axis.text = element_text(size = rel(1.5)))  # larger titles
+  theme(
+    )
 ```
 ]
  
@@ -179,8 +179,8 @@ ggplot(MICSsimulated,
 * ) +
   labs(
     ) +
-  theme(title = element_text(size = rel(1.5)),
-        axis.text = element_text(size = rel(1.5)))  # larger titles
+  theme(
+    )
 ```
 ]
  
@@ -204,8 +204,8 @@ ggplot(MICSsimulated,
   ) +
   labs(
     ) +
-  theme(title = element_text(size = rel(1.5)),
-        axis.text = element_text(size = rel(1.5)))  # larger titles
+  theme(
+    )
 ```
 ]
  
@@ -230,8 +230,8 @@ ggplot(MICSsimulated,
   ) +
   labs(
     ) +
-  theme(title = element_text(size = rel(1.5)),
-        axis.text = element_text(size = rel(1.5)))  # larger titles
+  theme(
+    )
 ```
 ]
  
@@ -257,8 +257,8 @@ ggplot(MICSsimulated,
   labs(
 *   title = "Spanking and Aggression",
     ) +
-  theme(title = element_text(size = rel(1.5)),
-        axis.text = element_text(size = rel(1.5)))  # larger titles
+  theme(
+    )
 ```
 ]
  
@@ -285,8 +285,8 @@ ggplot(MICSsimulated,
     title = "Spanking and Aggression",
 *   x = "spanking",
     ) +
-  theme(title = element_text(size = rel(1.5)),
-        axis.text = element_text(size = rel(1.5)))  # larger titles
+  theme(
+    )
 ```
 ]
  
@@ -314,8 +314,8 @@ ggplot(MICSsimulated,
     x = "spanking",
 *   y = "count"
     ) +
-  theme(title = element_text(size = rel(1.5)),
-        axis.text = element_text(size = rel(1.5)))  # larger titles
+  theme(
+    )
 ```
 ]
  
@@ -343,9 +343,14 @@ ggplot(MICSsimulated,
     x = "spanking",
     y = "count"
     ) +
+* scale_fill_manual(
+*   values = c("#1CABE2", "#D8D1C9")
+*   ) +
 * theme_minimal() +
-  theme(title = element_text(size = rel(1.5)),
-        axis.text = element_text(size = rel(1.5)))  # larger titles
+  theme(
+*   title = element_text(size = rel(1.5)),
+*   axis.text = element_text(size = rel(1.5))
+    )
 ```
 ]
  

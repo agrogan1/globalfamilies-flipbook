@@ -17,13 +17,16 @@ output:
 ```{css, echo=FALSE}
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 .title-slide { 
   color: #D8D1C9;
   background-color: #1CABE2; 
 }
+
 .title-slide h1 {
-    color: #D8D1C9;
+    color: black;
 }
+
 pre {
   white-space: pre-wrap;
 }
@@ -31,7 +34,7 @@ h1, h2, h3 {
   font-family: 'Montserrat', sans-serif;
 }
 body { 
-    font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 .author, .date {
   font-family: 'Montserrat', sans-serif;
@@ -123,14 +126,14 @@ We build up the plot step by step.
 ```{r graph1, include = FALSE, fig.height=4}
 
 ggplot(MICSsimulated,
-       aes(
+       aes( # aesthetic: what is in the graph
          x = cd1, #BREAK2
          fill = aggression #BREAK4
          )) +
   geom_bar( #BREAK3
     position = position_dodge() #BREAK5
   ) + #BREAK3
-  labs( 
+  labs( # labels
     title = "Spanking and Aggression", #BREAK6
     x = "spanking", #BREAK7
     y = "count" #BREAK7
@@ -139,7 +142,7 @@ ggplot(MICSsimulated,
     values = c("#1CABE2", "#D8D1C9") #BREAK8
     ) + #BREAK8
   theme_minimal() + #BREAK9
-  theme(
+  theme( # theme
     title = element_text(size = rel(1.5)), #BREAK9
     axis.text = element_text(size = rel(1.5)) #BREAK9
     ) 

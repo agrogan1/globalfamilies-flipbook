@@ -4,7 +4,7 @@
     <title>An Incremental ggplot Tutorial</title>
     <meta charset="utf-8" />
     <meta name="author" content="Andy Grogan-Kaylor" />
-    <meta name="date" content="2023-11-05" />
+    <meta name="date" content="2024-02-13" />
     <script src="libs/header-attrs-2.25/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/hygge.css" rel="stylesheet" />
@@ -32,7 +32,7 @@ class: center, middle, inverse, title-slide
 ### Andy Grogan-Kaylor
 ]
 .date[
-### 2023-11-05
+### 2024-02-13
 ]
 
 ---
@@ -41,13 +41,16 @@ class: center, middle, inverse, title-slide
 &lt;style type="text/css"&gt;
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&amp;display=swap');
+
 .title-slide { 
   color: #D8D1C9;
   background-color: #1CABE2; 
 }
+
 .title-slide h1 {
-    color: #D8D1C9;
+    color: black;
 }
+
 pre {
   white-space: pre-wrap;
 }
@@ -55,7 +58,7 @@ h1, h2, h3 {
   font-family: 'Montserrat', sans-serif;
 }
 body { 
-    font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 .author, .date {
   font-family: 'Montserrat', sans-serif;
@@ -129,11 +132,11 @@ count: false
 
 ```r
 ggplot(MICSsimulated,
-       aes(
+       aes(  # aesthetic: what is in the graph
          )) +
-  labs(
+  labs(  # labels
     ) +
-  theme(
+  theme(  # theme
     )
 ```
 ]
@@ -150,12 +153,12 @@ count: false
 
 ```r
 ggplot(MICSsimulated,
-       aes(
+       aes(  # aesthetic: what is in the graph
 *        x = cd1,
          )) +
-  labs(
+  labs(  # labels
     ) +
-  theme(
+  theme(  # theme
     )
 ```
 ]
@@ -172,14 +175,14 @@ count: false
 
 ```r
 ggplot(MICSsimulated,
-       aes(
+       aes(  # aesthetic: what is in the graph
          x = cd1,
          )) +
 * geom_bar(
 * ) +
-  labs(
+  labs(  # labels
     ) +
-  theme(
+  theme(  # theme
     )
 ```
 ]
@@ -196,15 +199,15 @@ count: false
 
 ```r
 ggplot(MICSsimulated,
-       aes(
+       aes(  # aesthetic: what is in the graph
          x = cd1,
 *        fill = aggression
          )) +
   geom_bar(
   ) +
-  labs(
+  labs(  # labels
     ) +
-  theme(
+  theme(  # theme
     )
 ```
 ]
@@ -221,16 +224,16 @@ count: false
 
 ```r
 ggplot(MICSsimulated,
-       aes(
+       aes(  # aesthetic: what is in the graph
          x = cd1,
          fill = aggression
          )) +
   geom_bar(
 *   position = position_dodge()
   ) +
-  labs(
+  labs(  # labels
     ) +
-  theme(
+  theme(  # theme
     )
 ```
 ]
@@ -247,17 +250,17 @@ count: false
 
 ```r
 ggplot(MICSsimulated,
-       aes(
+       aes(  # aesthetic: what is in the graph
          x = cd1,
          fill = aggression
          )) +
   geom_bar(
     position = position_dodge()
   ) +
-  labs(
+  labs(  # labels
 *   title = "Spanking and Aggression",
     ) +
-  theme(
+  theme(  # theme
     )
 ```
 ]
@@ -274,19 +277,19 @@ count: false
 
 ```r
 ggplot(MICSsimulated,
-       aes(
+       aes(  # aesthetic: what is in the graph
          x = cd1,
          fill = aggression
          )) +
   geom_bar(
     position = position_dodge()
   ) +
-  labs(
+  labs(  # labels
     title = "Spanking and Aggression",
 *   x = "spanking",
 *   y = "count"
     ) +
-  theme(
+  theme(  # theme
     )
 ```
 ]
@@ -303,14 +306,14 @@ count: false
 
 ```r
 ggplot(MICSsimulated,
-       aes(
+       aes(  # aesthetic: what is in the graph
          x = cd1,
          fill = aggression
          )) +
   geom_bar(
     position = position_dodge()
   ) +
-  labs(
+  labs(  # labels
     title = "Spanking and Aggression",
     x = "spanking",
     y = "count"
@@ -318,7 +321,7 @@ ggplot(MICSsimulated,
 * scale_fill_manual(
 *   values = c("#1CABE2", "#D8D1C9")
 *   ) +
-  theme(
+  theme(  # theme
     )
 ```
 ]
@@ -335,14 +338,14 @@ count: false
 
 ```r
 ggplot(MICSsimulated,
-       aes(
+       aes(  # aesthetic: what is in the graph
          x = cd1,
          fill = aggression
          )) +
   geom_bar(
     position = position_dodge()
   ) +
-  labs(
+  labs(  # labels
     title = "Spanking and Aggression",
     x = "spanking",
     y = "count"
@@ -351,7 +354,7 @@ ggplot(MICSsimulated,
     values = c("#1CABE2", "#D8D1C9")
     ) +
 * theme_minimal() +
-  theme(
+  theme(  # theme
 *   title = element_text(size = rel(1.5)),
 *   axis.text = element_text(size = rel(1.5))
     )

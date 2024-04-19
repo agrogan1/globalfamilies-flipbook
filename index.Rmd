@@ -62,7 +62,7 @@ library(xaringanExtra)
 
 xaringanExtra::use_tile_view()
 
-# xaringanExtra::use_slide_tone()
+xaringanExtra::use_slide_tone()
 
 xaringanExtra::use_share_again()
 

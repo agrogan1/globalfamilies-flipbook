@@ -4,7 +4,7 @@
     <title>An Incremental ggplot Tutorial</title>
     <meta charset="utf-8" />
     <meta name="author" content="Andy Grogan-Kaylor" />
-    <meta name="date" content="2024-04-19" />
+    <meta name="date" content="2024-04-22" />
     <script src="libs/header-attrs-2.25/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/hygge.css" rel="stylesheet" />
@@ -34,7 +34,7 @@ class: center, middle, inverse, title-slide
 ### Andy Grogan-Kaylor
 ]
 .date[
-### 2024-04-19
+### 2024-04-22
 ]
 
 ---
@@ -133,7 +133,7 @@ count: false
 .panel1-graph1-non_seq[
 
 ```r
-ggplot(MICSsimulated,
+ggplot(MICSsimulated,  # the data I am using
        aes(  # aesthetic: what is in the graph
          )) +
   labs(  # labels
@@ -154,7 +154,7 @@ count: false
 .panel1-graph1-non_seq[
 
 ```r
-ggplot(MICSsimulated,
+ggplot(MICSsimulated,  # the data I am using
        aes(  # aesthetic: what is in the graph
 *        x = cd1,
          )) +
@@ -176,7 +176,7 @@ count: false
 .panel1-graph1-non_seq[
 
 ```r
-ggplot(MICSsimulated,
+ggplot(MICSsimulated,  # the data I am using
        aes(  # aesthetic: what is in the graph
          x = cd1,
          )) +
@@ -200,7 +200,7 @@ count: false
 .panel1-graph1-non_seq[
 
 ```r
-ggplot(MICSsimulated,
+ggplot(MICSsimulated,  # the data I am using
        aes(  # aesthetic: what is in the graph
          x = cd1,
 *        fill = aggression
@@ -225,7 +225,7 @@ count: false
 .panel1-graph1-non_seq[
 
 ```r
-ggplot(MICSsimulated,
+ggplot(MICSsimulated,  # the data I am using
        aes(  # aesthetic: what is in the graph
          x = cd1,
          fill = aggression
@@ -251,7 +251,7 @@ count: false
 .panel1-graph1-non_seq[
 
 ```r
-ggplot(MICSsimulated,
+ggplot(MICSsimulated,  # the data I am using
        aes(  # aesthetic: what is in the graph
          x = cd1,
          fill = aggression
@@ -278,7 +278,7 @@ count: false
 .panel1-graph1-non_seq[
 
 ```r
-ggplot(MICSsimulated,
+ggplot(MICSsimulated,  # the data I am using
        aes(  # aesthetic: what is in the graph
          x = cd1,
          fill = aggression
@@ -307,7 +307,7 @@ count: false
 .panel1-graph1-non_seq[
 
 ```r
-ggplot(MICSsimulated,
+ggplot(MICSsimulated,  # the data I am using
        aes(  # aesthetic: what is in the graph
          x = cd1,
          fill = aggression
@@ -339,7 +339,7 @@ count: false
 .panel1-graph1-non_seq[
 
 ```r
-ggplot(MICSsimulated,
+ggplot(MICSsimulated,  # the data I am using
        aes(  # aesthetic: what is in the graph
          x = cd1,
          fill = aggression
@@ -358,7 +358,8 @@ ggplot(MICSsimulated,
 * theme_minimal() +
   theme(  # theme
 *   title = element_text(size = rel(1.5)),
-*   axis.text = element_text(size = rel(1.5))
+*   axis.text = element_text(size = rel(1.5)),
+*   legend.text=element_text(size = rel(1.5))
     )
 ```
 ]

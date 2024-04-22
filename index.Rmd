@@ -125,7 +125,7 @@ We build up the plot step by step.
 
 ```{r graph1, include = FALSE, fig.height=4}
 
-ggplot(MICSsimulated,
+ggplot(MICSsimulated, # the data I am using
        aes( # aesthetic: what is in the graph
          x = cd1, #BREAK2
          fill = aggression #BREAK4
@@ -144,7 +144,8 @@ ggplot(MICSsimulated,
   theme_minimal() + #BREAK9
   theme( # theme
     title = element_text(size = rel(1.5)), #BREAK9
-    axis.text = element_text(size = rel(1.5)) #BREAK9
+    axis.text = element_text(size = rel(1.5)), #BREAK9
+    legend.text=element_text(size = rel(1.5)) #BREAK9
     ) 
 
 ```

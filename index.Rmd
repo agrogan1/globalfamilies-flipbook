@@ -24,7 +24,7 @@ output:
 }
 
 .title-slide h1 {
-    color: black;
+    color: white;
 }
 
 pre {
